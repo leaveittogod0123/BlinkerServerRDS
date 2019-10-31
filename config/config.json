@@ -1,12 +1,16 @@
 {
   "development": {
-    "username": "YOUR USERNAME",
-    "password": "YOUR PASSWORD",
+    "username": "YOUR DBUSERNAME",
+    "password": "YOUR DBPASSWORD",
     "database": "YOUR DATABASE",
-    "host": "YOUR DATABASE HOST",
-    "port": "YOUR DATABASE PORT",
+    "host": "YOUR DBHOST",
+    "port": "YOUR DBPORT",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": false,
+    "SECURITY_GROUP": "HERE_YOUR_SECURITY_GROUP",
+    "SUBNETID_1": "HERE_YOUR_SUBNET_1",
+    "SUBNETID_2": "HERE_YOUR_SUBNET_2",
+    "SUBNETID_3": "HERE_YOUR_SUBNET_3"
   },
   "production": {
     "username": "root",

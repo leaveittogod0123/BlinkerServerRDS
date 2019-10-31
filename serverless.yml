@@ -27,17 +27,17 @@ provider:
   region: ap-northeast-2
   vpc:
     securityGroupIds:
-      - sg-26a7f948
+      - ${file(./config/config.json):development.HERE_YOUR_SECURITY_GROUP} 
     subnetIds:
-      - subnet-96c030fd
-      - subnet-96c030fd
-      - subnet-96c030fd
+      - ${file(./config/config.json):development.HERE_YOUR_SUBNET_1}
+      - ${file(./config/config.json):development.HERE_YOUR_SUBNET_2}
+      - ${file(./config/config.json):development.HERE_YOUR_SUBNET_3}
   environment:
-    MYSQLHOST: ${file(./config/config.js):development.host}
-    MYSQLPORT: ${file(./config/config.js):development.port}
-    MYSQLUSER: ${file(./config/config.js):development.username}
-    MYSQLPASS: ${file(./config/config.js):development.password}
-    MYSQLDATABASE: ${file(./config/config.js):development.database}
+    MYSQLHOST: ${file(./config/config.json):development.host}
+    MYSQLPORT: ${file(./config/config.json):development.port}
+    MYSQLUSER: ${file(./config/config.json):development.username}
+    MYSQLPASS: ${file(./config/config.json):development.password}
+    MYSQLDATABASE: ${file(./config/config.json):development.database}
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
 #    - Effect: "Allow"
@@ -137,7 +137,6 @@ functions:
 
 package:
   exclude: 
-    - node_modules/** # no need to add this yourself, this plugin does it for you
     - .gitignore
     - yarn.lock
     - package.json
