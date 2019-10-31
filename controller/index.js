@@ -1,4 +1,4 @@
-const model = require("../model");
+const model = require("../db");
 
 module.exports = {
   // 회원가입

@@ -1,11 +1,12 @@
 {
   "development": {
-    "usrname": "root",
-    "password": null,
+    "username": "YOUR USERNAME",
+    "password": "YOUR PASSWORD",
+    "database": "YOUR DATABASE",
+    "host": "YOUR DATABASE HOST",
+    "port": "YOUR DATABASE PORT",
     "dialect": "mysql",
-    "database": "blinker",
-    "host": "localhost",
-    "logging": false
+    "operatorsAliases": false
   },
   "production": {
     "username": "root",
