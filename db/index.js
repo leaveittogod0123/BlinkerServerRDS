@@ -96,7 +96,8 @@ module.exports = {
           }
         ],
         where: {},
-        order: [["score", "desc"]]
+        order: [["score", "desc"]],
+        limit: 10
       }).then(res => {
         let ret = [];
         for (let i = 0; i < res.length; i++) {

@@ -8,7 +8,7 @@
   "scripts": {
     "start": "NODE_ENV=development && nodemon cross-env app.js",
     "pm2": "pm2",
-    "deploy": "sls deploy -v"
+    "deploy": "sls deploy --aws-profile Blinker -v"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
